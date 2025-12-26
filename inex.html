@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Rajab | Engineering Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c5a059;
+            /* Gold accent like luxury real estate */
+            --dark-bg: #0b0f19;
+            --card-bg: #161e2d;
+            --text-light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 15, 25, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(11, 15, 25, 0.7), rgba(11, 15, 25, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .btn-main {
+            padding: 15px 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+
+        .btn-main:hover {
+            background: white;
+            color: var(--dark-bg);
+        }
+
+        /* Services / Marketing Section */
+        .section {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Floating Contact Box */
+        .contact-bar {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+        }
+
+        .contact-bar a {
+            color: #333;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .contact-bar a.wa {
+            color: #25d366;
+        }
+
+        .contact-bar a.map {
+            color: #ea4335;
+        }
+
+        .contact-bar a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Software section like a marketing gallery */
+        .software-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid var(--primary);
+            margin: 5px;
+            border-radius: 20px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">ZANA RAJAB</div>
+        <div style="color: white; font-size: 0.9rem;">CIVIL ENGINEER & ELECTRICAL EXPERT</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building the Future</h1>
+            <p>ENGINEERING | SITE MANAGEMENT | ELECTRICAL SOLUTIONS</p>
+            <a href="#contact" class="btn-main">Get In Touch</a>
+        </div>
+    </section>
+
+    <style>
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            /* وێنەی باکگراوندەکە لێرە جێگیر کراوە */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('a.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            color: #c5a059;
+            /* ڕەنگی زێڕین */
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid #c5a059;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-main:hover {
+            background: #c5a059;
+            color: #000;
+        }
+
+        /* ئەنیمەیشنی هاتنە ناوەوەی نووسینەکە */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* گونجاندن بۆ موبایل */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 3px;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <div id="multi-lang-section"
+        style="direction: rtl; font-family: 'Segoe UI', Tahoma, sans-serif; background: #0f172a; color: white; padding: 20px; border-radius: 15px;">
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; direction: ltr;">
+            <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+            <button class="lang-btn" onclick="changeLanguage('ku')">کوردی (بادینی)</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
+        </div>
+        <div class="profile-wrapper">
+            <img src="zzz.jpg" alt="Zana Rajab" class="my-photo">
+        </div>
+
+        <style>
+            .profile-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+                z-index: 20;
+            }
+
+            .my-photo {
+                width: 170px;
+                /* قەبارەی وێنەکە */
+                height: 170px;
+                border-radius: 50%;
+                /* بازنەیی */
+                border: 4px solid #c5a059;
+                /* چوارچێوەی زێڕین */
+                object-fit: cover;
+                /* ڕێگری لە کشان و تێکچوونی وێنەکە دەکات */
+                box-shadow: 0 0 25px rgba(197, 160, 89, 0.5);
+                /* سێبەری درەوشاوە */
+                animation: profileFadeIn 1.5s ease-out;
+                transition: 0.3s ease;
+            }
+
+            /* کاتێک ماوس دەچێتە سەر وێنەکە */
+            .my-photo:hover {
+                transform: translateY(-10px) scale(1.05);
+                border-color: #fff;
+                box-shadow: 0 10px 30px rgba(197, 160, 89, 0.8);
+            }
+
+            @keyframes profileFadeIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.8) translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+            }
+
+            /* ڕێکخستن بۆ مۆبایل */
+            @media (max-width: 768px) {
+                .my-photo {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        </style>
+        <div id="content-box"
+            style="text-align: right; padding: 20px; background: #1e293b; border-radius: 10px; border-right: 5px solid #c5a059;">
+            <h1 id="hero-title" style="color: #c5a059; margin-bottom: 15px;">ئەندازیار زانا رەجەب</h1>
+            <p id="hero-desc" style="font-size: 1.1rem; line-height: 1.8;">
+                ئەندازیارێ شارستانی و شارەزا د بوارێ کارەبێ دا. خودانێ ئەزموونا ٤ سالان د کارێ کارەبێ و ٢ سالان وەک
+                ئەندازیارێ سایتێ د پڕۆژەیێن جودا دا.
+            </p>
+
+            <div style="margin-top: 25px;">
+                <h3 id="skill-head" style="color: #c5a059;">شارەزاییێن تەکنیکی:</h3>
+                <ul id="skill-list" style="list-style: none; padding-right: 0;">
+                    <li>• دیزاین و سەرپەرشتیا پڕۆژەیێن ئاڤاهیا</li>
+                    <li>• شارەزا د بوارێ سیستەمێن کارەبێ یێن پێشکەفتی</li>
+                    <li>• کارکرن ل سەر بەرنامەیێن ئەندازیاری (AutoCAD, Revit, ETABS)</li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            .lang-btn {
+                padding: 8px 15px;
+                background: #2d3748;
+                color: white;
+                border: 1px solid #c5a059;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                font-weight: bold;
+            }
+
+            .lang-btn:hover {
+                background: #c5a059;
+                color: black;
+            }
+
+            /* RTL for Kurdish/Arabic, LTR for English */
+            .rtl {
+                direction: rtl;
+                text-align: right;
+            }
+
+            .ltr {
+                direction: ltr;
+                text-align: left;
+            }
+        </style>
+
+        <script>
+            const translations = {
+                ku: {
+                    title: "ئەندازیار زانا رەجەب",
+                    desc: "ئەندازیارێ شارستانی و شارەزا د بوارێ کارەبێ دا. خودانێ ئەزموونا ٤ سالان د کارێ کارەبێ و ٢ سالان وەک ئەندازیارێ سایتێ د پڕۆژەیێن جودا دا.",
+                    skillHead: "شارەزاییێن تەکنیکی:",
+                    skills: [
+                        "• دیزاین و سەرپەرشتیا پڕۆژەیێن ئاڤاهیا",
+                        "• شارەزا د بوارێ سیستەمێن کارەبێ یێن پێشکەفتی",
+                        "• کارکرن ل سەر بەرنامەیێن ئەندازیاری (AutoCAD, Revit, ETABS)"
+                    ],
+                    dir: "rtl"
+                },
+                en: {
+                    title: "Eng. Zana Rajab",
+                    desc: "Civil Engineer and Electrical Specialist. 4 years of experience in electrical systems and 2 years as a Site Engineer in various projects.",
+                    skillHead: "Technical Expertise:",
+                    skills: [
+                        "• Structural Design & Site Supervision",
+                        "• Expert in Advanced Electrical Systems",
+                        "• Proficient in Engineering Software (AutoCAD, Revit, ETABS)"
+                    ],
+                    dir: "ltr"
+                },
+                ar: {
+                    title: "المهندس زانا رجب",
+                    desc: "مهندس مدني وخبير في الأنظمة الكهربائية. خبرة 4 سنوات في الكهرباء وسنتين كمهندس موقع في مشاريع متنوعة.",
+                    skillHead: "الخبرات التقنية:",
+                    skills: [
+                        "• التصميم الإنشائي والإشراف الميداني",
+                        "• خبير في الأنظمة الكهربائية المتقدمة",
+                        "• محترف في البرامج الهندسية (AutoCAD, Revit, ETABS)"
+                    ],
+                    dir: "rtl"
+                }
+            };
+
+            function changeLanguage(lang) {
+                const data = translations[lang];
+                document.getElementById('hero-title').innerText = data.title;
+                document.getElementById('hero-desc').innerText = data.desc;
+                document.getElementById('skill-head').innerText = data.skillHead;
+
+                // Update skills list
+                const list = document.getElementById('skill-list');
+                list.innerHTML = "";
+                data.skills.forEach(skill => {
+                    const li = document.createElement('li');
+                    li.innerText = skill;
+                    list.appendChild(li);
+                });
+
+                // Change Direction (RTL/LTR)
+                const box = document.getElementById('content-box');
+                if (data.dir === "ltr") {
+                    box.classList.remove('rtl');
+                    box.classList.add('ltr');
+                    box.style.borderRight = "none";
+                    box.style.borderLeft = "5px solid #c5a059";
+                } else {
+                    box.classList.remove('ltr');
+                    box.classList.add('rtl');
+                    box.style.borderLeft = "none";
+                    box.style.borderRight = "5px solid #c5a059";
+                }
+            }
+        </script>
+    </div>
+    <section class="section">
+        <h2 class="section-title">Professional Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Site Management</h3>
+                <p>2 years of professional site supervision at University of Duhok projects. Quality and safety
+                    guaranteed.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-bolt"></i>
+                <h3>Electrical Systems</h3>
+                <p>4 years of deep expertise in complex electrical installations and smart building solutions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Modern Design</h3>
+                <p>Proficient in civil 3D, Revit, and ETABS to bring structural concepts to reality.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="software-skills-section"
+        style="padding: 40px 0; font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white;">
+
+        <h2 style="text-align: center; color: #c5a059; margin-bottom: 30px;">Engineering Software Tools</h2>
+
+        <div
+            style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
+
+            <div class="sw-card" onclick="toggleInfo('autocad')">
+                <div class="sw-header"><i class="fas fa-drafting-compass"></i> AutoCAD</div>
+                <div id="autocad" class="sw-info">بۆ کێشانی نەخشەی دوو دووری (2D) و سێ دووری (3D) بە وردی تێکۆشەرانە و
+                    داڕشتنی وردەکارییەکانی ئەندازیاری بەکاردێت.</div>
+            </div>
+
+            <div class="sw-card" onclick="toggleInfo('civil3d')">
+                <div class="sw-header"><i class="fas fa-road"></i> AutoCAD Civil 3D</div>
+                <div id="civil3d" class="sw-info">بەکاردێت بۆ دیزاینکردنی ژێرخان (Infrastructure)، وەک ڕێگاوبان، ئاوەڕۆ،
+                    و هەژمارکردنی بڕی خاککاری.</div>
+            </div>
+
+            <div class="sw-card" onclick="toggleInfo('revit')">
+                <div class="sw-header"><i class="fas fa-cubes"></i> Revit (BIM)</div>
+                <div id="revit" class="sw-info">سیستەمێکی مۆدێرنە بۆ مۆدێلکردنی زانیارییەکانی بینا (BIM)، ڕێگە دەدات
+                    مۆدێلی سێ دووری زیرەک دروست بکەیت کە هەموو بەشەکانی بینا پێکەوە دەبەستێتەوە.</div>
+            </div>
+
+            <div class="sw-card" onclick="toggleInfo('etabs')">
+                <div class="sw-header"><i class="fas fa-calculator"></i> ETABS</div>
+                <div id="etabs" class="sw-info">بۆ شیکردنەوەی پێکهاتەیی (Structural Analysis) و دیزاینکردنی باڵەخانە
+                    بەرزەکان و بەرگرییان بەرامبەر زەوی لەرزە و با بەکاردێت.</div>
+            </div>
+
+            <div class="sw-card" onclick="toggleInfo('sketchup')">
+                <div class="sw-header"><i class="fas fa-draw-polygon"></i> SketchUp</div>
+                <div id="sketchup" class="sw-info">بۆ مۆدێلکردنی سێ دووری خێرا و پیشاندانی بیرۆکە تەلارسازییەکان بە
+                    شێوەیەکی بینراو و جوان بەکاردێت.</div>
+            </div>
+
+        </div>
+
+        <style>
+            .sw-card {
+                background: #1e293b;
+                border: 1px solid #334155;
+                border-radius: 12px;
+                padding: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .sw-card:hover {
+                border-color: #c5a059;
+                background: #262f3f;
+            }
+
+            .sw-header {
+                font-weight: bold;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #c5a059;
+            }
+
+            .sw-info {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+                color: #cbd5e1;
+                font-size: 0.95rem;
+                margin-top: 10px;
+                line-height: 1.6;
+                border-top: 1px solid transparent;
+            }
+
+            .sw-info.open {
+                max-height: 200px;
+                border-top: 1px solid #334155;
+                padding-top: 10px;
+            }
+        </style>
+
+        <script>
+            function toggleInfo(id) {
+                const infoBox = document.getElementById(id);
+                const allBoxes = document.querySelectorAll('.sw-info');
+
+                // داخستنی ئەوانی تر کاتێک یەکێک دەکرێتەوە (Optional)
+                allBoxes.forEach(box => {
+                    if (box.id !== id) box.classList.remove('open');
+                });
+
+                // کردنەوەی ئەوەی کلیکی لێکراوە
+                infoBox.classList.toggle('open');
+            }
+        </script>
+    </div>
+    <section class="section" id="contact">
+        <h2 class="section-title">Available for Projects</h2>
+        <p style="font-size: 1.5rem;">Duhok, Kurdistan Region</p>
+        <p style="color: var(--primary); margin-top: 10px;">Ready to bring engineering excellence to your team.</p>
+    </section>
+
+    <div class="contact-bar">
+        <a href="tel:07515043506" title="Call Me"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/9647515043506" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:Zzana1679@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.google.com/maps?q=Duhok" class="map" target="_blank" title="civilon"><i
+                class="fas fa-civilon-dot"></i></a>
+    </div>
+    <div id="projects-civilon-section" style="padding: 40px 0; font-family: 'Segoe UI', Tahoma, sans-serif;">
+
+        <div style="margin-bottom: 25px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+            <button class="map-nav-btn active" onclick="switchProjectMap('sheladzi', this)">شێلادزێ</button>
+            <button class="map-nav-btn" onclick="switchProjectMap('prime', this)">پرایم ڤیلج - دهۆک</button>
+            <button class="map-nav-btn" onclick="switchProjectMap('corniche', this)">کۆرنیشی شێلادزێ</button>
+        </div>
+
+        <div
+            style="width: 100%; height: 450px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 2px solid #c5a059; position: relative; background: #eee;">
+
+            <iframe id="iframe-sheladzi" class="project-map-iframe active"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12836.42512061099!2d43.8966785!3d37.0505556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40062f8b8e053f1d%3A0x7d6b38c3567866e4!2sSheladiz%C3%AA!5e0!3m2!1sen!2siq!4v1710000000000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <iframe id="iframe-prime" class="project-map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.782156847849!2d42.9463889!3d36.8530556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40089163e8000001%3A0x7000000000000000!2sPrime%20Village!5e0!3m2!1sen!2siq!4v1710000000000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <iframe id="iframe-corniche" class="project-map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.123!2d43.901234!3d37.045678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDAyJzQ0LjQiTiA0M8KwNTQnMDQuNCJF!5e0!3m2!1sen!2siq!4v1710000000000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <style>
+            .map-nav-btn {
+                padding: 10px 20px;
+                background: #1a2238;
+                color: #fff;
+                border: 1px solid #c5a059;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+
+            .map-nav-btn.active {
+                background: #c5a059;
+                color: #000;
+            }
+
+            .project-map-iframe {
+                display: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            .project-map-iframe.active {
+                display: block;
+            }
+        </style>
+
+        <script>
+            function switchProjectMap(id, element) {
+                // Hide all maps
+                document.querySelectorAll('.project-map-iframe').forEach(map => {
+                    map.classList.remove('active');
+                });
+                // Show target map
+                document.getElementById('iframe-' + id).classList.add('active');
+
+                // Toggle button active class
+                document.querySelectorAll('.map-nav-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                element.classList.add('active');
+            }
+        </script>
+    </div>
+
+    <footer style="padding: 40px; text-align: center; color: #444; font-size: 0.8rem;">
+        &copy; 2025 ZANA RAJAB. ALL RIGHTS RESERVED.
+    </footer>
+    <div id="language-component">
+        <div id="lang-fab" onclick="toggleLangMenu()">
+            <i class="fas fa-globe"></i>
+        </div>
+
+        <div id="lang-menu">
+            <div
+                style="background: #c5a059; color: black; padding: 12px; font-weight: bold; text-align: center; font-size: 0.9rem;">
+                Select Language | زمانەکەت هەلبژێرە
+            </div>
+
+            <div class="lang-option" onclick="applyLanguage('ku')">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <svg width="24" height="16" viewBox="0 0 1200 800">
+                        <rect width="1200" height="267" fill="#E41E20" />
+                        <rect width="1200" height="267" y="267" fill="#FFF" />
+                        <rect width="1200" height="267" y="534" fill="#138E42" />
+                        <circle cx="600" cy="400" r="140" fill="#FCAD10" />
+                        <path
+                            d="M600 240L618 322L696 280L660 361L742 379L650 400L742 421L660 439L696 520L618 478L600 560L582 478L504 520L540 439L458 421L550 400L458 379L540 361L504 280L582 322z"
+                            fill="#FCAD10" />
+                    </svg>
+                    <span>کوردی (بادینی)</span>
+                </div>
+            </div>
+
+            <div class="lang-option" onclick="applyLanguage('en')">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="https://flagcdn.com/w40/us.png" width="24" style="border-radius: 2px;">
+                    <span>English</span>
+                </div>
+            </div>
+
+            <div class="lang-option" onclick="applyLanguage('ar')">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="https://flagcdn.com/w40/iq.png" width="24" style="border-radius: 2px;">
+                    <span>العربية</span>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #lang-fab {
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                background-color: #c5a059;
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 26px;
+                cursor: pointer;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                z-index: 10000;
+                transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            #lang-fab:hover {
+                transform: scale(1.1) rotate(15deg);
+            }
+
+            #lang-menu {
+                position: fixed;
+                bottom: 170px;
+                right: 20px;
+                width: 240px;
+                background: #111827;
+                border-radius: 16px;
+                overflow: hidden;
+                display: none;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+                z-index: 10000;
+                border: 1px solid rgba(197, 160, 89, 0.3);
+                animation: slideIn 0.4s ease;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px) scale(0.9);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            .lang-option {
+                padding: 18px;
+                cursor: pointer;
+                color: #f1f5f9;
+                transition: 0.3s;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 0.95rem;
+            }
+
+            .lang-option:hover {
+                background: rgba(197, 160, 89, 0.1);
+                color: #c5a059;
+                padding-left: 25px;
+            }
+        </style>
+
+        <script>
+            function toggleLangMenu() {
+                const menu = document.getElementById('lang-menu');
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            }
+
+            function applyLanguage(lang) {
+                if (typeof changeLanguage === "function") {
+                    changeLanguage(lang);
+                }
+                toggleLangMenu();
+            }
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const menu = document.getElementById('lang-menu');
+                const fab = document.getElementById('lang-fab');
+                if (!fab.contains(event.target) && !menu.contains(event.target)) {
+                    menu.style.display = 'none';
+                }
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
